@@ -1,0 +1,34 @@
+# Data-structures
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,max,i,j,a[10],m,l;
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<n-1;i++)
+    {
+        max=a[i];
+        for(j=i+1;j<n;j++)
+        {
+            if(a[j]>max)
+            {
+                max=a[j];
+                a[j]=a[i];
+                a[i]=max;
+                
+            }
+        }
+    }
+    for(int k=0;k<n;k++)
+    {
+        cout<<a[k];
+    }
+    cin>>m;
+    l=m-1;
+    cout<<a[l];
+return 0;
+}
